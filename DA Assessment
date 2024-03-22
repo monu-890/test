@@ -1,0 +1,106 @@
+Q-1 Ans- Inheritance and polymorphism are two fundamental concepts in object-oriented programming and they achieving code reusability.
+
+Inheritance:
+Inheritance is a type in OOPs that involve a class (derived class) to inherit properties and behavior from another class (base class). This means that a deriveclass can reuse the attributes and methods of its baseclass and also add its own unique attributes and methods.
+class Vehicle:
+    def __init__(self, name):
+        self.name = name
+
+    def sound(self):
+        pass
+
+Polymorphism:
+Polymorphism is the ability of different objects to respond in different ways to the same message or method call. It allows objects of different classes to be treated as objects of a common superclass.
+class Shape:
+    def area(self):
+        pass
+
+class Rectangle(Shape):
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
+    def area(self):
+        return self.length * self.width
+
+class Circle(Shape):
+    def __init__(self, radius):
+        self.radius = radius
+
+    def area(self):
+        return 3.14 * self.radius ** 2
+def total_area(shapes):
+    total = 0
+    for shape in shapes:
+        total += shape.area()
+    return total
+rectangle = Rectangle(4, 5)
+circle = Circle(3)
+shapes = [rectangle, circle]
+print("Total area:", total_area(shapes))
+
+Q-2 Ans
+there are three types of function 
+
+Built-in Functions:
+These are functions that are built into Python itself and are available for use without the need for importing any module.
+print("Hello, World!")  
+User-defined Functions:
+These are functions defined by the user to perform specific tasks. They can be defined using the def keyword.
+def add(a, b):
+    return a + b
+result = add(3, 4)
+print(result)
+Anonymous Functions (Lambda Functions):
+These are small, one-line functions that don't have a name. They are defined using the lambda…
+
+Q-3 Ans
+#find out missing values
+a = a.read_csv('data1.csv')
+b = a.isnull()
+
+b-yes there is fillna and dropna  function in pandas 
+fillna is use for replace missing values with zero and dropna is use for remove rows of missing values.
+
+c-import pandas as pd
+df = pd.read_csv('data1.csv')
+df= pd.to_datetime(df)
+print(df.dtype)
+
+
+Q-5 Ans
+select product_name,SUM(revenue) as total_revenue from customer
+where transaction_date >= DATE(MONTH)
+GROUP BY PRODUCT;
+
+
+Q-6 Ans
+select SUM(customer) as total_revenue from your_order_table where month(order) = 1 and year(order) = 2024;
+
+
+Q-7 Ans
+select department_name
+count(employee_id) as total_employee,
+AVG(salary) as average_salary from employee
+group by department_name;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
